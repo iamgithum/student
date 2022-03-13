@@ -1,10 +1,18 @@
 ## Basic printing strings and taking input
+
+# This is a comment
+
+"""
+This is multi-line comment
+"""
+
 print("Hello World")
 input = input("Name : ")
 print("Welcome " + input + ", to the world of Python.") ## + concatenation of two strings
 
 ## input function concepts
 num = input("Enter a number: ")
+print(type(num))
 var = int(num) + 2
 print("Your Number" + num + " is added by 2: " + str(var))
 
@@ -16,23 +24,15 @@ print(str.find("Text"))
 print(str.replace("Text", "Codes"))
 
 ## Basic mathmatical operations
-var1 = 2
-var2 = 3
-add = var1 + var2
-sub = var1 - var2
-mul = var1 * var2
-div = var2 / var1
-divf = var2 // var1
-mod = var2 % var1
-pow = var1 ** var2
+var1, var2 = 2, 3   # Declaring variables in single line
 
-print(add)
-print(sub)
-print(mul)
-print(div)
-print(divf)
-print(mod)
-print(pow)
+print(var1 + var2)
+print(var1 - var2)
+print(var1 * var2)
+print(var2 / var1)
+print(var2 // var1)
+print(var2 % var1)
+print( var1 ** var2)
 
 ## Comparative Operations
 num1 = 6
@@ -46,8 +46,7 @@ print(num1 == num2)
 print(num1 != num2)
 
 ## Logical Operators
-alfa = 45
-beta = 54
+alfa, beta = 45, 54
 
 print(alfa < beta and alfa != beta)
 print(alfa > beta and alfa != beta)
@@ -57,6 +56,22 @@ print(alfa > beta or alfa == beta)
 
 print(not alfa > beta)
 print(not alfa < beta)
+
+## Multi Line String
+comment = """This is a
+multi-line comment.
+And its cool."""
+print(comment)
+
+## Complex Data Type & Random
+import random
+print(random.randrange(1,10))
+com = 1j
+print(type(com), com, com + 1)
+
+## search using print
+searchStr = "Search String"
+print("ing" in searchStr)   ## in Keyword
 
 ## Decision Making
 theta = 90
@@ -145,8 +160,6 @@ while itup < 3:
 for Itup in Tuple:
     print(Itup)
 
-
-
 ## Dictionary
 data = {"code" : "python", "note" : "vim", "OS" : "Linix"}
 print(data)
@@ -165,3 +178,12 @@ print(dir(math))    ## this line requires previous line
 root = 25
 print(sqrt(root))   ## this line require line alpha
 
+### Declaring function, Global Variable & Global Keyword
+fun_var = "variable"
+def function_test():
+    print(fun_var, "Global Variable")
+    global InFunVar 
+    InFunVar = "In Function Variable, Declared Globally"
+
+function_test()
+print(InFunVar)
