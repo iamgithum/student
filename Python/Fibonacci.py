@@ -1,9 +1,6 @@
 ## Fibonacci Series
-n = input("Eneter a number: ")
-i = 1
-a = 1
-b = 0
-c = 0
+n = input("Enter a number: ")
+i, a, b, c = 1, 1, 0, 0
 while i < int(n):
     c = a + b
     print(c, sep=",", end=" ")
